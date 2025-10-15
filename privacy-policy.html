@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Leads Bucket (Sales Navigator)</title>
+<style>
+  body{max-width:760px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0b0f14}
+  h1{font-size:28px;margin-bottom:8px} .muted{color:#6b7280} code{background:#f3f4f6;padding:.1em .3em;border-radius:6px}
+  a{color:#0ea5ff;text-decoration:none}
+</style>
+<body>
+<h1>Privacy Policy — Leads Bucket (Sales Navigator)</h1>
+<p class="muted">Last updated: 2025-10-15</p>
+
+<p><strong>What this extension does</strong><br>
+Leads Bucket lets you collect lead details from LinkedIn Sales Navigator pages you visit (e.g., contact name, job title, company, email, profile URL), keep them locally in a “bucket,” and export CSV or send them to a webhook that you configure.</p>
+
+<h2>Data we access</h2>
+<ul>
+  <li>Page content on <code>sales.linkedin.com</code> only when you trigger capture (icon/popup/auto-capture in the popup).</li>
+  <li>Fields extracted by CSS selectors: name, job title, company, email, profile URL (and any fields you add later).</li>
+</ul>
+
+<h2>How data is used and stored</h2>
+<ul>
+  <li>Data is stored <strong>locally</strong> in your browser via <code>chrome.storage</code> until you delete it, export CSV, or send it to your webhook.</li>
+  <li>No data is sent to us or any third party by default.</li>
+  <li>If you set a webhook, the extension will POST your stored leads to the URL you configured when you click “Pour.”</li>
+</ul>
+
+<h2>Data sharing</h2>
+<ul>
+  <li>We do <strong>not</strong> sell or share data.</li>
+  <li>Data may be sent to your own systems only if you configure a webhook. You control that endpoint.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+  <li><code>activeTab</code>, <code>tabs</code>, <code>scripting</code> — to message/inject the content script on the active Sales Navigator tab and read the page DOM on capture.</li>
+  <li><code>storage</code> — to store your leads locally and your webhook settings.</li>
+  <li>Host permission <code>https://sales.linkedin.com/*</code> — to read page HTML on that domain only.</li>
+</ul>
+
+<h2>Remotely hosted code</h2>
+<p>None. All code ships with the extension. The only network call is the optional POST to your configured webhook.</p>
+
+<h2>Security & retention</h2>
+<p>Data remains in your <code>chrome.storage</code> until you Clear, Remove, export, or uninstall the extension.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Don’t press Capture (or disable auto-capture) if you don’t want to store a page.</li>
+  <li>Use Remove/Clear to delete items at any time.</li>
+  <li>Don’t configure a webhook if you don’t want data sent off-device.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+
+</body></html>
